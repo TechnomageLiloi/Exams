@@ -21,7 +21,6 @@ use Liloi\Config\Sparkle;
 
 use Liloi\Config\Pool;
 
-include __DIR__ . '/Database.php';
-include __DIR__ . '/Default.php';
+include __DIR__ . '/Private.php';
 
 return Pool::getSingleton();

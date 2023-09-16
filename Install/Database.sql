@@ -1,4 +1,4 @@
-create table quests_questions
+create table artifacts_questions
 (
 	key_question bigint unsigned auto_increment,
 	title varchar(250) not null,
@@ -9,7 +9,7 @@ create table quests_questions
 	tags varchar(100) not null,
 	dt timestamp not null,
 	data json not null,
-	constraint exams_questions_pk
+	constraint artifacts_questions_pk
 		primary key (key_question)
 );
 
