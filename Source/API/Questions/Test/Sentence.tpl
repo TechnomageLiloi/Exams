@@ -9,7 +9,10 @@
     }
 </style>
 <div id="testing-<?php echo $entity->getKey(); ?>">
-
+    <div class="theory" style="display: none;">
+        <?php echo $entity->getParseTheory(); ?>
+    </div>
+    <a href="javascript:void(0)" onclick="$(this).parent().find('.theory').toggle();">Theory</a>
     <a href="javascript:void(0)" onclick="Testing.checkSentence('<?php echo $entity->getKey(); ?>');">Check</a>
     <hr/>
     <div class="sentence">

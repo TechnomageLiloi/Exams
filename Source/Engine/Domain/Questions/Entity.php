@@ -86,4 +86,9 @@ class Entity extends AbstractEntity
         $this->setStatus(Statuses::OBSOLETE);
         $this->save();
     }
+
+    public function getParseTheory(): string
+    {
+        return Parser::parseString($this->getTheory());
+    }
 }

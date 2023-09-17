@@ -1,4 +1,22 @@
 const Testing = {
+    /**
+     * Colorize block.
+     * Trigger: on answer.
+     *
+     * @param jq_block Question block.
+     * @param is_correct Is answer correct.
+     */
+    result: function (jq_block, is_correct)
+    {
+        if(is_correct)
+        {
+            jq_block.css('background-color', '#E5FFE3');
+            return;
+        }
+
+        jq_block.css('background-color', '#FFE3E3');
+    },
+
     turnAround: function (key_question)
     {
         const id = '#testing-' + key_question;
@@ -20,7 +38,7 @@ const Testing = {
 
         const is_correct = jq_selected.data('correct');
 
-        alert('Answer is ' + (is_correct ? '' : 'in') + 'correct');
+        Testing.result(jq_block, is_correct);
     },
 
     checkCheck: function (key_question)
@@ -45,7 +63,7 @@ const Testing = {
             }
         });
 
-        alert('Answer is ' + (is_final ? '' : 'in') + 'correct');
+        Testing.result(jq_block, is_final);
     },
 
     checkSentence: function (key_question)
@@ -61,12 +79,12 @@ const Testing = {
             const correct = jq_check.data('correct');
             const actual = jq_check.val();
 
-            if(correct !== actual)
+            if(correct != actual)
             {
                 is_final = false;
             }
         });
 
-        alert('Answer is ' + (is_final ? '' : 'in') + 'correct');
+        Testing.result(jq_block, is_final);
     }
 };
