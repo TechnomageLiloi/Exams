@@ -26,7 +26,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_question desc;',
+            'select * from %s order by key_question desc limit 100;',
             $name
         ));
 
@@ -45,7 +45,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s where tags like "%%%s%%";',
+            'select * from %s where tags like "%%%s%%" limit 100;',
             $name, $tags
         ));
 
