@@ -1,14 +1,5 @@
-<style>
-    #testing-<?php echo $entity->getKey(); ?>
-    {
-        border: gray 2px solid;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #ffffe3;
-        margin: 10px;
-    }
-</style>
-<div id="testing-<?php echo $entity->getKey(); ?>">
+<link href="<?php echo ROOT_URL; ?>/Source/API/Questions/Test/Style.css" rel="stylesheet" />
+<div id="testing-<?php echo $entity->getKey(); ?>" class="testing-sentence">
     <div class="theory" style="display: none;">
         <?php echo $entity->getParseTheory(); ?>
     </div>
