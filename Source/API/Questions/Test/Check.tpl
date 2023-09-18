@@ -1,4 +1,4 @@
-<link href="/Source/API/Questions/Test/Style.css" rel="stylesheet" />
+<link href="<?php echo ROOT_URL; ?>/Source/API/Questions/Test/Style.css" rel="stylesheet" />
 <div id="testing-<?php echo $entity->getKey(); ?>" class="testing-check">
 
     <div class="question">

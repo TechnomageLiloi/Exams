@@ -1,20 +1,5 @@
-<style>
-    #testing-<?php echo $entity->getKey(); ?>
-    {
-        border: gray 2px solid;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #ffffe3;
-        margin: 10px;
-    }
-
-    #testing-<?php echo $entity->getKey(); ?> .question-try
-    {
-        width: 100%;
-        border: none;
-    }
-</style>
-<div id="testing-<?php echo $entity->getKey(); ?>">
+<link href="<?php echo ROOT_URL; ?>/Source/API/Questions/Test/Style.css" rel="stylesheet" />
+<div id="testing-<?php echo $entity->getKey(); ?>" class="testing-card">
 
     <div class="question">
         <div class="theory" style="display: none;">
