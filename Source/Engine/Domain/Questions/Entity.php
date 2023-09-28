@@ -31,7 +31,9 @@ use Liloi\Stylo\Parser;
  *
  * @method string getData()
  * @method void setData(string $value)
-
+ *
+ * @method string getPower()
+ * @method void setPower(string $value)
  */
 class Entity extends AbstractEntity
 {
@@ -45,10 +47,15 @@ class Entity extends AbstractEntity
         return Types::$list[$this->getType()];
     }
 
-
     public function getStatusTitle(): string
     {
         return Statuses::$list[$this->getStatus()];
+    }
+
+
+    public function getPowerTitle(): string
+    {
+        return Powers::$list[$this->getPower()];
     }
 
     public function getStatusClass(): string

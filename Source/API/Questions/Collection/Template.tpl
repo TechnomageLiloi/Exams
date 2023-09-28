@@ -22,6 +22,7 @@
         <?php foreach($collection as $entity): ?>
         <tr>
             <td><?php echo $entity->getTitle(); ?></td>
+            <td><?php echo $entity->getPowerTitle(); ?></td>
             <td><?php echo $entity->getTypeTitle(); ?></td>
             <td><?php echo $entity->getStatusTitle(); ?></td>
             <td style="text-align: right; width: 300px;">

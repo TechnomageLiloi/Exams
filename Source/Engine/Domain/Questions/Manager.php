@@ -113,7 +113,8 @@ class Manager extends DomainManager
             'theory' => '// theory',
             'tags' => 'tags',
             'dt' => date('Y-m-d H:i:s'),
-            'data' => '{}'
+            'data' => '{}',
+            'power' => Powers::PROBLEM
         ];
         self::getAdapter()->insert($name, $data);
 
