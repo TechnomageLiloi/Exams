@@ -31,7 +31,9 @@ use Liloi\Stylo\Parser;
  *
  * @method string getData()
  * @method void setData(string $value)
-
+ *
+ * @method string getPower()
+ * @method void setPower(string $value)
  */
 class Entity extends AbstractEntity
 {
