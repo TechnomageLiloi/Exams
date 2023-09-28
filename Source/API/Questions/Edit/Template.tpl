@@ -40,6 +40,14 @@
             </select>
         </td></tr>
 
+        <tr><td>Power</td><td>
+            <select name="power">
+                <?php foreach($powers as $key => $value): ?>
+                <option value="<?php echo $key; ?>" <?php if($entity->getPower() == $key): ?>selected="selected"<?php endif; ?>><?php echo $value; ?></option>
+                <?php endforeach; ?>
+            </select>
+        </td></tr>
+
         <tr><td>Program</td><td><textarea name="program"><?php echo $entity->getProgram(); ?></textarea></td></tr>
         <tr><td>Theory</td><td><textarea name="theory"><?php echo $entity->getTheory(); ?></textarea></td></tr>
         <tr><td>Data</td><td><textarea name="data"><?php echo $entity->getData(); ?></textarea></td></tr>

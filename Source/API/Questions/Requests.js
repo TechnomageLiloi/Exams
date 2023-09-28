@@ -99,6 +99,7 @@ API.Questions = {
             'title': jq_block.find('[name="title"]').val(),
             'status': jq_block.find('[name="status"]').val(),
             'type': jq_block.find('[name="type"]').val(),
+            'power': jq_block.find('[name="power"]').val(),
             'program': jq_block.find('[name="program"]').val(),
             'theory': jq_block.find('[name="theory"]').val(),
             'tags': jq_block.find('[name="tags"]').val(),

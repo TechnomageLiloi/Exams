@@ -21,6 +21,7 @@ class Method extends SuperMethod
         $entity->setTags(self::getParameter('tags'));
         $entity->setDt(self::getParameter('dt'));
         $entity->setData(self::getParameter('data'));
+        $entity->setPower(self::getParameter('power'));
 
         $entity->save();
 
