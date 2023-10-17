@@ -17,7 +17,20 @@
         <?php shuffle($answers); ?>
         <?php foreach($answers as $answer): ?>
             <input type="radio" name="radio-<?php echo $entity->getKey(); ?>" data-correct="<?php echo $answer['correct'] ?? ''; ?>">
-            <?php echo $answer['answer']; ?>
+
+
+            <?php $ans = $answer['answer']; ?>
+
+            <?php if($answer['anagram'] ?? false): ?>
+            <?php
+                $ans = preg_split("//u", $ans, null, PREG_SPLIT_NO_EMPTY);
+                shuffle($ans);
+                $ans = join('', $ans);
+            ?>
+            <?php endif; ?>
+
+            <?php echo $ans; ?>
+
             <br/>
         <?php endforeach; ?>
     </div>
