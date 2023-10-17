@@ -8,13 +8,13 @@
         <a href="javascript:void(0)" onclick="$(this).parent().find('.theory').toggle();">Theory</a>
         <a href="javascript:void(0)" onclick="Testing.turnAround('<?php echo $entity->getKey(); ?>');">Turn around</a>
         <hr/>
-        <?php echo $entity->getElement('question'); ?>
+        <?php echo \Liloi\Stylo\Parser::parseString($entity->getElement('question')); ?>
     </div>
 
     <div class="answer" style="display: none;">
         <a href="javascript:void(0)" onclick="Testing.turnAround('<?php echo $entity->getKey(); ?>');">Turn around</a>
         <hr/>
-        <?php echo $entity->getElement('answer'); ?>
+        <?php echo \Liloi\Stylo\Parser::parseString($entity->getElement('answer')); ?>
     </div>
 
     <hr/>

@@ -13,7 +13,7 @@
             <?php if(str_starts_with($block, '==')): ?>
                 <input type="text" data-correct="<?php echo str_replace('==', '', $block); ?>">
             <?php else: ?>
-                <?php echo $block; ?>
+                <?php echo \Liloi\Stylo\Parser::parseString($block); ?>
             <?php endif; ?>
         <?php endforeach; ?>
     </div>
