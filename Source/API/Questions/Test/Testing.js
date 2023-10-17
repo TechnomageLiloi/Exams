@@ -88,3 +88,10 @@ const Testing = {
         Testing.result(jq_block, is_final);
     }
 };
+
+const getAnagram = function (input)
+{
+    const array = input.split('');
+    const shuffledArray = array.sort((a, b) => 0.5 - Math.random());
+    return shuffledArray.join('');
+};

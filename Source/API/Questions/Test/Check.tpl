@@ -17,7 +17,18 @@
         <?php shuffle($answers); ?>
         <?php foreach($answers as $answer): ?>
             <input type="checkbox" name="check-<?php echo $entity->checkCheck(); ?>" data-correct="<?php echo $answer['correct'] ?? ''; ?>">
-            <?php echo $answer['answer']; ?>
+
+            <?php $ans = $answer['answer']; ?>
+
+            <?php if($answer['anagram'] ?? false): ?>
+                <?php
+                    $ans = preg_split("//u", $ans, null, PREG_SPLIT_NO_EMPTY);
+                    shuffle($ans);
+                    $ans = join('', $ans);
+                ?>
+            <?php endif; ?>
+
+            <?php echo $ans; ?>
             <br/>
         <?php endforeach; ?>
     </div>
