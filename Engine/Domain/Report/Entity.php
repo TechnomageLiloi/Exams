@@ -36,4 +36,20 @@ class Entity extends AbstractEntity
     {
         Manager::save($this);
     }
+
+    /**
+     * Gets class of report record.
+     */
+    public function getClass(): string
+    {
+        return $this->getResult() ? 'done' : 'undone';
+    }
+
+    /**
+     * Gets timestamp of report record.
+     */
+    public function getTimestamp(): string
+    {
+        return date('Y-m-d H:i', strtotime($this->getKey()));
+    }
 }
