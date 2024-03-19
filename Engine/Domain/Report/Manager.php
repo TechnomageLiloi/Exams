@@ -94,7 +94,7 @@ class Manager extends DomainManager
             'key_question' => $keyQuestion,
             'result' => $result ? 1 : 0,
             'comment' => $comment,
-            'data' => $data
+            'data' => json_encode($data, JSON_UNESCAPED_UNICODE)
         ];
         self::getAdapter()->insert($name, $rows);
 

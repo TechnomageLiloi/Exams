@@ -10,15 +10,12 @@ API.Report = {
         });
     },
 
-    create: function ()
+    create: function (key_question, result, comment)
     {
-        if(!confirm('Are you sure?'))
-        {
-            return;
-        }
-
         API.request('Exams.Report.Create', {
-
+            key_question: key_question,
+            result: result,
+            comment: comment
         }, function (data) {
             API.Questions.collection();
         }, function () {

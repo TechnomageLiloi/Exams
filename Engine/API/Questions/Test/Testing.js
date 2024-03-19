@@ -86,6 +86,12 @@ const Testing = {
         });
 
         Testing.result(jq_block, is_final);
+    },
+
+    checkDone: function (key_question, result, comment)
+    {
+        API.Report.create(key_question, result, comment);
+        API.Questions.collection();
     }
 };
 
