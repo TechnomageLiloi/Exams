@@ -8,3 +8,5 @@ var Stones = {
 
     }
 };
+
+var API = {};

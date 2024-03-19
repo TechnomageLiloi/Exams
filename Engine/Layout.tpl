@@ -13,8 +13,12 @@
         <link href="<?php echo ROOT_URL; ?>/Engine/Style.css" rel="stylesheet" />
         <link href="<?php echo ROOT_URL; ?>/Engine/API/Style.css" rel="stylesheet" />
 
-        <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/Bootstrap.js"></script>
+
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Questions/Requests.js"></script>
+
+
 
         <title>Rune</title>
     </head>
@@ -24,7 +28,7 @@
         </div>
         <div id="page">
             <script>
-
+                API.Questions.collection();
             </script>
         </div>
     </body>
