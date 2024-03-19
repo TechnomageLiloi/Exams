@@ -10,4 +10,18 @@ CREATE TABLE `rune_questions` (
     `data` json NOT NULL,
     `power` tinyint(3) unsigned NOT NULL DEFAULT '1',
     PRIMARY KEY (`key_question`)
-) 
+);
+
+create table rune_report
+(
+    key_report timestamp not null,
+    key_question bigint unsigned not null,
+    result bool not null,
+    comment varchar(250) not null,
+    data json not null,
+    constraint rune_report_pk
+        primary key (key_report, key_question),
+    constraint rune_report_rune_questions_key_question_fk
+        foreign key (key_question) references rune_questions (key_question)
+            on update cascade on delete cascade
+);
