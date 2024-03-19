@@ -26,7 +26,7 @@ class Manager extends DomainManager
         $name = self::getTableName();
 
         $rows = self::getAdapter()->getArray(sprintf(
-            'select * from %s order by key_report desc limit 10;',
+            'select * from %s order by key_report desc limit 100;',
             $name
         ));
 

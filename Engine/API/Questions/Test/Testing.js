@@ -88,9 +88,9 @@ const Testing = {
         Testing.result(jq_block, is_final);
     },
 
-    checkDone: function (key_question, result, comment)
+    checkDone: function (block, key_question, result)
     {
-        API.Report.create(key_question, result, comment);
+        API.Report.create(key_question, result, block.find('.comment').val());
         API.Questions.collection();
     }
 };
