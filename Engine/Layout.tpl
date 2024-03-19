@@ -17,8 +17,7 @@
 
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Questions/Requests.js"></script>
-
-
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Questions/Test/Testing.js"></script>
 
         <title>Rune</title>
     </head>
