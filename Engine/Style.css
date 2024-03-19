@@ -8,6 +8,7 @@ body a {
 body #head {
   padding: 5px;
   text-align: center;
+  background-color: #ffffd0;
 }
 body a.butn {
   border: red 1px solid;
