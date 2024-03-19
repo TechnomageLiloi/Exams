@@ -18,6 +18,7 @@
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Questions/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Questions/Test/Testing.js"></script>
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Report/Requests.js"></script>
 
         <title>Rune</title>
     </head>
@@ -27,6 +28,7 @@
             <a href="javascript:void(0)" onclick="API.Questions.create();" class="butn">Create question</a>
             <input type="text" id="tags" value="">
             <a href="javascript:void(0)" onclick="API.Questions.suite();" class="butn">Suite-test</a>
+            <a href="javascript:void(0)" onclick="API.Report.collection();" class="butn">Report</a>
         </div>
         <div id="page">
             <script>
