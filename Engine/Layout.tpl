@@ -23,9 +23,10 @@
     </head>
     <body>
         <div id="head">
-            <a href="<?php echo ROOT_URL !== '' ? ROOT_URL : '/'; ?>">Root</a>
+            <a href="<?php echo ROOT_URL !== '' ? ROOT_URL : '/'; ?>" class="butn">Root</a>
+            <a href="javascript:void(0)" onclick="API.Questions.create();" class="butn">Create question</a>
             <input type="text" id="tags" value="">
-            <a href="javascript:void(0)" onclick="API.Questions.suite();">Suite-test</a>
+            <a href="javascript:void(0)" onclick="API.Questions.suite();" class="butn">Suite-test</a>
         </div>
         <div id="page">
             <script>

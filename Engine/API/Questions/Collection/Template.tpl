@@ -16,13 +16,18 @@
 
 </style>
 <div id="problem-group">
-    <a href="javascript:void(0)" onclick="API.Questions.create();">Create</a>
-    <hr/>
     <table>
+        <tr>
+            <th>Title</th>
+            <th>Tags</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th style="text-align: right;">Actions</th>
+        </tr>
         <?php foreach($collection as $entity): ?>
         <tr>
             <td><?php echo $entity->getTitle(); ?></td>
-            <td><?php echo $entity->getPowerTitle(); ?></td>
+            <td><?php echo $entity->getTags(); ?></td>
             <td><?php echo $entity->getTypeTitle(); ?></td>
             <td><?php echo $entity->getStatusTitle(); ?></td>
             <td style="text-align: right; width: 300px;">
