@@ -30,6 +30,11 @@ class Types
     public const SENTENCE = 4;
 
     /**
+     * Done: done/undone buttons.
+     */
+    public const DONE = 5;
+
+    /**
      * Type list.
      *
      * @var string[]
@@ -39,5 +44,6 @@ class Types
         self::RADIO => 'Radio',
         self::CHECK => 'Check',
         self::SENTENCE => 'Sentence',
+        self::DONE => 'Done/undone',
     ];
 }

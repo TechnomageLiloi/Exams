@@ -33,6 +33,8 @@ class Method extends SuperMethod
                 $template = 'Radio'; break;
             case Types::SENTENCE:
                 $template = 'Sentence'; break;
+            case Types::DONE:
+                $template = 'Done'; break;
             case Types::CARD:
             default: $template = 'Card';
         }
