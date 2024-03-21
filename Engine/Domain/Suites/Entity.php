@@ -8,14 +8,11 @@ use Liloi\Stylo\Parser;
 /**
  * Entity: report record.
  *
- * @method string getResult()
- * @method void setResult(string $value)
+ * @method string getTitle()
+ * @method void setTitle(string $value)
  *
  * @method string getSummary()
  * @method void setSummary(string $value)
- *
- * @method string getData()
- * @method void setData(string $value)
  */
 class Entity extends AbstractEntity
 {
