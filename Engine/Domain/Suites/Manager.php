@@ -50,6 +50,11 @@ class Manager extends DomainManager
             $key_report
         ));
 
+        if(!$row)
+        {
+            return self::create($key_report, $key_report, '-');
+        }
+
         return Entity::create($row);
     }
 
@@ -85,17 +90,17 @@ class Manager extends DomainManager
         string $keySuite,
         string $title,
         string $summary
-    ): array
+    ): Entity
     {
         $name = self::getTableName();
-        $rows = [
+        $row = [
             'key_suite' => $keySuite,
             'title' => $title,
             'summary' => $summary
         ];
-        self::getAdapter()->insert($name, $rows);
+        self::getAdapter()->insert($name, $row);
 
-        return $rows;
+        return Entity::create($row);
     }
 
     public static function linkToName(string $link): string

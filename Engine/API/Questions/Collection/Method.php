@@ -12,8 +12,8 @@ class Method extends SuperMethod
     public static function execute(): Response
     {
         $name = SuitesManager::linkToName($_SERVER['REQUEST_URI']);
-        $collection = QuestionsManager::loadBySuite($name);
         $suite = SuitesManager::load($name);
+        $collection = QuestionsManager::loadBySuite($name);
 
         $response = new Response();
         $response->set('render', static::render(__DIR__ . '/Template.tpl', [
