@@ -97,4 +97,16 @@ class Manager extends DomainManager
 
         return $rows;
     }
+
+    public static function linkToName(string $link): string
+    {
+        $part = strtolower(trim(str_replace('/', ':', $link), ':'));
+
+        if(!$part)
+        {
+            return 'rune';
+        }
+
+        return 'rune:' . $part;
+    }
 }
