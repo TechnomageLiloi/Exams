@@ -42,6 +42,16 @@ class Entity extends AbstractEntity
         return $this->getField('key_question');
     }
 
+    public function getKeySuite(): string
+    {
+        return $this->getField('key_suite');
+    }
+
+    public function setKeySuite(string $key_suite): void
+    {
+        $this->setField('key_suite', $key_suite);
+    }
+
     public function getTypeTitle(): string
     {
         return Types::$list[$this->getType()];

@@ -96,6 +96,7 @@ API.Questions = {
         const jq_block = $('#blueprint-edit');
         API.request('Exams.Questions.Save', {
             'key_question': key_question,
+            'key_suite': jq_block.find('[name="key_suite"]').val(),
             'title': jq_block.find('[name="title"]').val(),
             'status': jq_block.find('[name="status"]').val(),
             'type': jq_block.find('[name="type"]').val(),

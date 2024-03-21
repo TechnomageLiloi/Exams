@@ -20,6 +20,7 @@
             <th>Value</th>
         </tr>
 
+        <tr><td>Suite</td><td><input type="text" name="key_suite" value="<?php echo $entity->getKeySuite(); ?>"/></td></tr>
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
         <tr><td>Tags</td><td><input type="text" name="tags" value="<?php echo $entity->getTags(); ?>"/></td></tr>
         <tr><td>Timestamp</td><td><input type="text" name="dt" value="<?php echo $entity->getDt(); ?>"/></td></tr>
