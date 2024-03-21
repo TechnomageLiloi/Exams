@@ -23,6 +23,13 @@
             <a href="javascript:void(0)" onclick="Rune.Suites.edit('<?php echo $suite->getKey(); ?>');" class="butn">Edit</a>
             <?php echo $suite->getTitle(); ?>
         </h3>
+        <ol>
+            <?php foreach($subsuites as $subs): ?>
+                <li>
+                    <a href="<?php echo $subs->getLink(); ?>"><?php echo $subs->getTitle(); ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ol>
         <?php echo $suite->getSummaryParse(); ?>
     </div>
 

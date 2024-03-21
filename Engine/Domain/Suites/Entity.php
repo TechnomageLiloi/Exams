@@ -33,4 +33,17 @@ class Entity extends AbstractEntity
     {
         Manager::save($this);
     }
+
+    public function getLink(): string
+    {
+        $name = $this->getKey();
+
+        if($name === 'rune')
+        {
+            return '/';
+        }
+
+        $name = str_replace('rune:', '', $name);
+        return '/' . str_replace(':', '/', $name);
+    }
 }

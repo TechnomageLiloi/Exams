@@ -40,6 +40,25 @@ class Manager extends DomainManager
         return $collection;
     }
 
+    public static function loadSubsuites(string $key_report): Collection
+    {
+        $name = self::getTableName();
+
+        $rows = self::getAdapter()->getArray(sprintf(
+            'select * from %s where (key_suite like "%s:%%") and (key_suite not like "%s:%%:%%") order by key_suite desc limit 100;',
+            $name, $key_report, $key_report
+        ));
+
+        $collection = new Collection();
+
+        foreach($rows as $row)
+        {
+            $collection[] = Entity::create($row);
+        }
+
+        return $collection;
+    }
+
     public static function load(string $key_report): Entity
     {
         $name = self::getTableName();
