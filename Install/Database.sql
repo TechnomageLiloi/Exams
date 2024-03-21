@@ -25,3 +25,12 @@ create table rune_report
         foreign key (key_question) references rune_questions (key_question)
             on update cascade on delete cascade
 );
+
+create table rune_suites
+(
+    key_suite varchar(1000) not null,
+    title varchar(100) not null,
+    summary text not null,
+    constraint rune_suites_pk
+        primary key (key_suite)
+);
