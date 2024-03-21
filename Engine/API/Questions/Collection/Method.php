@@ -13,10 +13,12 @@ class Method extends SuperMethod
     {
         $name = SuitesManager::linkToName($_SERVER['REQUEST_URI']);
         $collection = QuestionsManager::loadBySuite($name);
+        $suite = SuitesManager::load($name);
 
         $response = new Response();
         $response->set('render', static::render(__DIR__ . '/Template.tpl', [
-            'collection' => $collection
+            'collection' => $collection,
+            'suite' => $suite
         ]));
 
         return $response;
