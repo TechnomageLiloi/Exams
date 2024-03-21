@@ -34,6 +34,9 @@ class Tree
             $manager->add(new Method('Exams.Report.Collection', '\Liloi\Rune\API\Report\Collection\Method::execute'));
             $manager->add(new Method('Exams.Report.Create', '\Liloi\Rune\API\Report\Create\Method::execute'));
 
+            $manager->add(new Method('Rune.Suites.Edit', '\Liloi\Rune\API\Suites\Edit\Method::execute'));
+            $manager->add(new Method('Rune.Suites.Save', '\Liloi\Rune\API\Suites\Save\Method::execute'));
+
             $manager->add(new Method('Exams.Questions.Collection', '\Liloi\Rune\API\Questions\Collection\Method::execute'));
             $manager->add(new Method('Exams.Questions.Create', '\Liloi\Rune\API\Questions\Create\Method::execute'));
             $manager->add(new Method('Exams.Questions.Remove', '\Liloi\Rune\API\Questions\Remove\Method::execute'));

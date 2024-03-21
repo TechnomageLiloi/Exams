@@ -13,12 +13,15 @@
         <link href="<?php echo ROOT_URL; ?>/Engine/Style.css" rel="stylesheet" />
         <link href="<?php echo ROOT_URL; ?>/Engine/API/Style.css" rel="stylesheet" />
 
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
+
         <script src="<?php echo ROOT_URL; ?>/Engine/Bootstrap.js"></script>
 
-        <script src="<?php echo ROOT_URL; ?>/Engine/API/Requests.js"></script>
+
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Questions/Requests.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Questions/Test/Testing.js"></script>
         <script src="<?php echo ROOT_URL; ?>/Engine/API/Report/Requests.js"></script>
+        <script src="<?php echo ROOT_URL; ?>/Engine/API/Suites/Requests.js"></script>
 
         <title>Rune</title>
     </head>

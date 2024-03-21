@@ -20,7 +20,7 @@
 
     <div>
         <h3>
-            <a href="javascript:void(0)" onclick="API.Questions.test();" class="butn">Edit</a>
+            <a href="javascript:void(0)" onclick="Rune.Suites.edit('<?php echo $suite->getKey(); ?>');" class="butn">Edit</a>
             <?php echo $suite->getTitle(); ?>
         </h3>
         <?php echo $suite->getSummaryParse(); ?>

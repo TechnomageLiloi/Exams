@@ -12,7 +12,7 @@
     }
 </style>
 <div id="blueprint-edit">
-    <a href="javascript:void(0)" onclick="API.Questions.save('<?php echo $entity->getKey(); ?>');">Save</a>
+    <a href="javascript:void(0)" onclick="Rune.Suites.save('<?php echo $entity->getKey(); ?>');">Save</a>
     <hr/>
     <table style="width: 100%;">
         <tr>
@@ -22,9 +22,9 @@
 
         <tr><td>Title</td><td><input type="text" name="title" value="<?php echo $entity->getTitle(); ?>"/></td></tr>
 
-        <tr><td>Summary</td><td><textarea name="summary"><?php echo $entity->getProgram(); ?></textarea></td></tr>
+        <tr><td>Summary</td><td><textarea name="summary"><?php echo $entity->getSummary(); ?></textarea></td></tr>
 
     </table>
     <hr/>
-    <a href="javascript:void(0)" onclick="API.Questions.save('<?php echo $entity->getKey(); ?>');">Save</a>
+    <a href="javascript:void(0)" onclick="Rune.Suites.save('<?php echo $entity->getKey(); ?>');">Save</a>
 </div>
