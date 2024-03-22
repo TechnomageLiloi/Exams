@@ -108,4 +108,11 @@ class Entity extends AbstractEntity
     {
         return Parser::parseString($this->getTheory());
     }
+
+    public function getDataElement(string $key)
+    {
+        $data = json_decode($this->getData(), JSON_UNESCAPED_UNICODE);
+
+        return $data[$key];
+    }
 }

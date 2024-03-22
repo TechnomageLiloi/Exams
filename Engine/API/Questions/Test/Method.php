@@ -35,6 +35,8 @@ class Method extends SuperMethod
                 $template = 'Sentence'; break;
             case Types::DONE:
                 $template = 'Done'; break;
+            case Types::VIDEO:
+                $template = 'Video'; break;
             case Types::CARD:
             default: $template = 'Card';
         }

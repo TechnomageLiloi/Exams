@@ -35,15 +35,21 @@ class Types
     public const DONE = 5;
 
     /**
+     * Video and algorithm.
+     */
+    public const VIDEO = 6;
+
+    /**
      * Type list.
      *
      * @var string[]
      */
     public static $list = [
+        self::DONE => 'Done/undone',
+        self::VIDEO => 'Video and Algorithm',
         self::CARD => 'Card',
         self::RADIO => 'Radio',
         self::CHECK => 'Check',
         self::SENTENCE => 'Sentence',
-        self::DONE => 'Done/undone',
     ];
 }
